@@ -1,0 +1,70 @@
+.UserProfileCard{
+    max-width: 500px;
+  margin: 60px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+.user-card h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #333333;
+}
+
+.UserProfileCard h3 {
+  font-size: 22px;
+  color: #2c3e50;
+  margin-bottom: 5px;
+}
+
+.UserProfileCard p {
+  font-size: 18px;
+  color: #555555;
+  margin-bottom: 20px;
+}
+
+.UserProfileCard input,
+.UserProfileCard textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.UserProfileCard textarea {
+  height: 80px;
+  resize: none;
+}
+
+.UserProfileCard button {
+  padding: 10px 18px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.UserProfileCard button:first-of-type {
+  background-color: #007bff;
+  color: white;
+}
+
+.UserProfileCard button:first-of-type:hover {
+  background-color: #0056b3;
+}
+
+.UserProfileCard button:last-of-type {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+.UserPrUserProfileCard:last-of-type:hover {
+  background-color: #cccccc;
+}
