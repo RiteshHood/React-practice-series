@@ -1,0 +1,76 @@
+/* Remove default browser spacing */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f8;
+  /* text-align: center; */
+}
+
+
+/* Main heading */
+.Dashboard-title {
+  text-align: center;
+  margin: 30px 0;
+  font-size: 32px;
+}
+
+
+/* Container holding all student cards */
+.dashboard {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 25px;
+}
+
+
+/* Individual student card */
+.container {
+  background-color: white;
+
+  padding: 25px;
+
+  border-radius: 10px;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+  transition: transform 0.2s;
+}
+
+
+/* Small hover effect */
+.container:hover {
+  transform: translateY(-5px);
+}
+
+
+/* Student information */
+.studentInfo h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.studentInfo h4 {
+  margin: 10px 0;
+}
+
+
+/* Pass / Fail */
+.pass {
+  color: green;
+  font-weight: bold;
+}
+
+.fail {
+  color: red;
+  font-weight: bold;
+}
