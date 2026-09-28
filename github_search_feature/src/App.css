@@ -1,0 +1,176 @@
+/* App.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f6f8fa;
+  color: #24292f;
+}
+
+/* Main container */
+.container {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-top: 60px;
+}
+
+/* Form section */
+form {
+  width: 500px;
+  background-color: white;
+
+  padding: 30px;
+  border-radius: 12px;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+.title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.title h1 {
+  font-size: 28px;
+  color: #24292f;
+}
+
+/* Input section */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-container label {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.form-container input {
+  width: 100%;
+  padding: 12px;
+
+  font-size: 16px;
+
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+
+  outline: none;
+}
+
+/* Input focus */
+.form-container input:focus {
+  border-color: #0969da;
+  box-shadow: 0 0 0 3px rgba(9, 105, 218, 0.15);
+}
+
+/* Search button */
+.search-btn {
+  margin-top: 20px;
+}
+
+.search-btn button {
+  width: 100%;
+  padding: 12px;
+
+  background-color: #24292f;
+  color: white;
+
+  border: none;
+  border-radius: 6px;
+
+  font-size: 16px;
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+/* Button hover */
+.search-btn button:hover {
+  background-color: #0969da;
+}
+
+/* User display section */
+.display-user {
+  width: 500px;
+  margin-top: 30px;
+}
+
+/* User profile card */
+.user-profile {
+  background-color: white;
+
+  padding: 30px;
+
+  border-radius: 12px;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+  text-align: center;
+}
+
+/* User ID */
+.user-profile h2:first-child {
+  font-size: 14px;
+  color: #57606a;
+  margin-bottom: 5px;
+}
+
+/* User name */
+.user-profile h2:nth-child(2) {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+/* Location */
+.user-profile h3 {
+  font-size: 16px;
+  color: #57606a;
+  margin: 10px 0;
+}
+
+/* Bio */
+.user-profile p {
+  margin: 20px 0;
+
+  color: #57606a;
+  line-height: 1.5;
+}
+
+/* Followers / Following */
+.user-profile h3:nth-last-child(-n + 2) {
+  display: inline-block;
+
+  margin: 10px;
+  padding: 10px 15px;
+
+  background-color: #f6f8fa;
+
+  border-radius: 6px;
+
+  color: #24292f;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  form,
+  .display-user {
+    width: 90%;
+  }
+
+  .container {
+    padding-top: 30px;
+  }
+}
