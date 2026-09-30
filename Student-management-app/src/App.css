@@ -1,0 +1,92 @@
+/* Main page */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+}
+
+/* Form container */
+.container {
+  width: 400px;
+  margin: 50px auto;
+  padding: 25px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Labels */
+label {
+  margin-top: 12px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* Inputs */
+input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
+}
+
+input:focus {
+  border-color: #555;
+}
+
+/* Add student button */
+form > button {
+  margin-top: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background: #222;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+form > button:hover {
+  background: #444;
+}
+
+/* Students section */
+.students-list {
+  margin-top: 30px;
+}
+
+/* Individual student card */
+.students-list > div {
+  margin-top: 15px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fafafa;
+}
+
+.students-list h2,
+.students-list h3 {
+  margin: 6px 0;
+}
+
+/* Delete button */
+.students-list button {
+  margin-top: 10px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  background: #d32f2f;
+  color: white;
+  cursor: pointer;
+}
+
+.students-list button:hover {
+  background: #b71c1c;
+}
