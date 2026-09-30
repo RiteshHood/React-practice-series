@@ -50,9 +50,7 @@ function App() {
     );
   }
 
-  let studentFound = false;
   const searchStudent = (name) => {
-    studentFound = true;
     setSearchResult(
       students.filter(student => student.name === name)
     );
