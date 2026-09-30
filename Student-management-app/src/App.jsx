@@ -6,6 +6,9 @@ function App() {
 
   const [students, setStudents] = useState([]);
   const [searchResult, setSearchResult] = useState([]);
+  const [studentFound, setStudentFound] = useState(false);
+  const [search, setSearch] = useState("");
+
   const [formData, setFormdata] = useState({
     name: '',
     age: '',
@@ -51,9 +54,16 @@ function App() {
   }
 
   const searchStudent = (name) => {
-    setSearchResult(
-      students.filter(student => student.name === name)
-    );
+
+    const result = students.filter(student => student.name === name);
+
+    if (result.length > 0) {
+      setStudentFound(true);
+    }
+    else {
+      setStudentFound(false);
+    }
+    setSearchResult(result);
   }
 
   return (
@@ -73,44 +83,47 @@ function App() {
           <input type="number" name='marks' onChange={handleChange} id='student-marks' />
 
           <button type='submit'> Add student</button><br />
-          <input type="text" placeholder='search student by name..' name='target-name' id='target-name' onChange={(e) => searchStudent(e.target.value)} />
+          <input type="text" placeholder='search student by name..' value={search} name='target-name' id='target-name' onChange={(e) => {
+            setSearch(e.target.value);
+            searchStudent(e.target.value)
+          }}
+          />
 
         </form>
-        <div className="students-list">
-          {
-            students.map((student) => {
-              return (
-
-                <Students
-                  key={student.id}
-                  id={student.id}
-                  name={student.name}
-                  age={student.age}
-                  course={student.course}
-                  marks={student.marks}
-                  handleDelete={handleDelete}
-                />
-              )
-            })
-          }
-        </div>
-        <div className="search-result-container">
+       
+        {search.length > 0 ? <div className="search-result-container">
           {searchResult.map((student) => {
             return (
-              <>
-                <Students
-                  key={student.id}
-                  id={student.id}
-                  name={student.name}
-                  age={student.age}
-                  course={student.course}
-                  marks={student.marks}
-                  handleDelete={handleDelete}
-                />
-              </>
+              <Students
+                key={student.id}
+                id={student.id}
+                name={student.name}
+                age={student.age}
+                course={student.course}
+                marks={student.marks}
+                handleDelete={handleDelete}
+              />
             )
           })}
+        </div> : <div className="students-list">{
+          students.map((student) => {
+            return (
+
+              <Students
+                key={student.id}
+                id={student.id}
+                name={student.name}
+                age={student.age}
+                course={student.course}
+                marks={student.marks}
+                handleDelete={handleDelete}
+              />
+            )
+          })
+        }
         </div>
+        }
+
       </div>
     </>
   )
