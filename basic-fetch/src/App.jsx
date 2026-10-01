@@ -5,7 +5,7 @@ import Users from './Components/Users';
 
 function App() {
 
-  const [loading, setLaoding] = useState(true);
+  const [loading, setLoading] = useState(true);
 
   const [users, setUsers] = useState([]);
 
@@ -14,15 +14,14 @@ function App() {
 
   async function fetchData() {
 
-    setLaoding(true);
+    setLoading(true);
     // This returns us a promise.
     let response = await fetch(url);
     let data = await response.json();
-
+    
     // Returns the array of objects.
     setUsers(data);
-
-    setLaoding(false);
+    setLoading(false);
 
   }
 
